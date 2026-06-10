@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulaire d'Entrée Salarié - SHINE</title>
+    <title>Formulaire d'Entrée Salarié - EBP</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -509,90 +509,6 @@
             100% { transform: translateY(110vh) translateX(5px) rotate(5deg) scale(1); opacity: 0; }
         }
 
-        /* ⚽ COUPE DU MONDE 2026 (11 juin - 19 juillet) */
-        .wc-ball {
-            font-size: 30px;
-            animation: wc-ball-fall linear infinite;
-            filter: drop-shadow(0 4px 10px rgba(0,0,0,0.35));
-        }
-        @keyframes wc-ball-fall {
-            0%   { transform: translateY(-10vh) translateX(0) rotate(0deg); opacity: 0; }
-            8%   { opacity: 1; }
-            20%  { transform: translateY(20vh) translateX(50px) rotate(72deg); }
-            40%  { transform: translateY(40vh) translateX(-40px) rotate(144deg); }
-            60%  { transform: translateY(60vh) translateX(60px) rotate(216deg); }
-            80%  { transform: translateY(80vh) translateX(-30px) rotate(288deg); }
-            92%  { opacity: 1; }
-            100% { transform: translateY(112vh) translateX(0) rotate(360deg); opacity: 0; }
-        }
-        .wc-trophy {
-            font-size: 34px;
-            animation: wc-trophy-fall linear infinite;
-            filter: drop-shadow(0 0 12px rgba(255,215,0,0.8));
-        }
-        @keyframes wc-trophy-fall {
-            0%   { transform: translateY(-10vh) rotate(-15deg) scale(0.8); opacity: 0; }
-            8%   { opacity: 1; }
-            25%  { transform: translateY(25vh) translateX(35px) rotate(10deg) scale(1); }
-            50%  { transform: translateY(50vh) translateX(-30px) rotate(-8deg) scale(1.1); }
-            75%  { transform: translateY(75vh) translateX(25px) rotate(12deg) scale(0.95); }
-            92%  { opacity: 1; }
-            100% { transform: translateY(112vh) rotate(-15deg) scale(0.8); opacity: 0; }
-        }
-        .wc-confetti {
-            position: absolute;
-            border-radius: 2px;
-            animation: wc-confetti-spin linear infinite;
-        }
-        @keyframes wc-confetti-spin {
-            0%   { transform: translateY(-10vh) rotate(0deg) scaleX(1); opacity: 0; }
-            8%   { opacity: 1; }
-            30%  { transform: translateY(30vh) translateX(40px) rotate(270deg) scaleX(-1); }
-            60%  { transform: translateY(60vh) translateX(-30px) rotate(540deg) scaleX(1); }
-            90%  { opacity: 1; }
-            100% { transform: translateY(112vh) rotate(720deg); opacity: 0; }
-        }
-        .wc-trophy-banner {
-            position: absolute;
-            top: 18px;
-            left: 50%;
-            transform: translateX(-50%);
-            background: linear-gradient(135deg, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0.4) 100%);
-            border: 2px solid rgba(255,215,0,0.8);
-            border-radius: 50px;
-            padding: 10px 28px;
-            font-size: 18px;
-            font-weight: 800;
-            letter-spacing: 2px;
-            color: #FFD700;
-            text-shadow: 0 0 15px rgba(255,215,0,0.9), 0 0 30px rgba(255,165,0,0.6);
-            box-shadow: 0 0 20px rgba(255,215,0,0.4), inset 0 0 20px rgba(255,215,0,0.05);
-            pointer-events: none;
-            white-space: nowrap;
-            animation: wc-banner-pulse 3s ease-in-out infinite;
-            backdrop-filter: blur(4px);
-        }
-        @keyframes wc-banner-pulse {
-            0%, 100% { opacity: 0.9;  box-shadow: 0 0 20px rgba(255,215,0,0.4), inset 0 0 20px rgba(255,215,0,0.05); }
-            50%       { opacity: 1;   box-shadow: 0 0 35px rgba(255,215,0,0.7), inset 0 0 25px rgba(255,215,0,0.1); border-color: rgba(255,215,0,1); }
-        }
-        .wc-sun {
-            position: absolute;
-            top: 55px;
-            right: 110px;
-            width: 75px;
-            height: 75px;
-            background: radial-gradient(circle, #FFF176 0%, #FFD700 50%, #FFA500 100%);
-            border-radius: 50%;
-            box-shadow: 0 0 50px 15px rgba(255,215,0,0.5);
-            animation: wc-sun-pulse 4s ease-in-out infinite;
-            pointer-events: none;
-        }
-        @keyframes wc-sun-pulse {
-            0%, 100% { transform: scale(1);   box-shadow: 0 0 50px 15px rgba(255,215,0,0.5); }
-            50%       { transform: scale(1.08); box-shadow: 0 0 70px 25px rgba(255,215,0,0.75); }
-        }
-
         /* 📚 SEPTEMBRE : Rentrée scolaire */
         .rentree-particle {
             font-size: 22px;
@@ -1083,14 +999,10 @@
     <div class="container">
         <div class="card">
             <div class="header">
-                <svg width="180" height="60" viewBox="0 0 360 120" xmlns="http://www.w3.org/2000/svg">
-                    <text x="50%" y="88" text-anchor="middle"
-                        font-family="Manrope, sans-serif"
-                        font-weight="800"
-                        font-size="90"
-                        letter-spacing="8"
-                        fill="white"
-                        style="filter:drop-shadow(0 2px 8px rgba(0,0,0,0.2))">SHINE</text>
+                <svg width="180" height="75" viewBox="0 0 702.9949722 289.4713444" xmlns="http://www.w3.org/2000/svg">
+                    <path fill="white" d="M0,289.4713444h194.7649612v-45.0899963c-48.6039886,1.7230072-125.056694,2.3680115-125.3830948,2.1529999v-39.1689911c36.1051025-.8610077,74.1680984-2.9060059,116.0391006-6.1360016v-35.07901c-4.2429962.9690094-78.7369995,6.6740112-116.0391006,7.2120056v-38.6309967c55.4580994-2.5839996,78.955101-4.4130096,125.4921036-10.0110016v-42.8501968c-61.0050049,7.7498932-100.112999,11.8400955-194.7651872,11.4310989v196.1591034h-.1087828v.0109863Z"/>
+                    <path fill="white" d="M679.7259903,34.6378521c-15.8390503-19.2348995-43.0890503-34.6378521-78.9000244-34.6378521-49.3770142,0-104.6390076,19.9237522-133.2160034,29.3743519v260.0959854h69.1640015v-67.46698l63.8339844-3.2290039c28.7080078-1.9380035,57.5570068-12.0130005,77.4540405-34.9290009,18.5910034-21.5169983,24.8239746-47.5540009,24.9329834-74.4530029,0-21.3014984-3.3400269-49.5886993-23.2689819-74.7544975ZM536.7739639,158.1953587v-85.2384033c15.0449829-5.4788055,33.0269775-9.2461014,50.6719971-9.1277008,24.1820068-.1184006,45.5690308,12.0554962,45.5690308,39.3420944,0,31.7639999-21.8550415,48.7919998-50.6820068,51.041008l-45.5700073,3.9830017h.0109863Z"/>
+                    <path fill="white" d="M394.9599686,160.3453526c-5.0039978,0-12.1839905.322998-17.9389954,1.076004,43.9379883-6.7810059,62.9639893-33.0340118,62.8549805-69.9426041,0-18.2876968-12.2919922-61.9779015-67.8589783-47.2423019-39.2590027,11.4096031-95.9140015,25.5962982-153.6560059,34.2074051v211.0134811l134.5209961-.4309998c80.0429993,0,96.8940125-42.6139832,96.8940125-78.3389893s-20.006012-50.4599915-54.6970215-50.4599915l-.1080017.1069946-.0109863.0110016ZM286.3289566,109.4433522c2.3930054-.538002,48.9309998-10.0100021,55.4580078-11.0865021,6.2000122-.9687958,22.2890015-3.3367996,30.230011,3.4445038,3.9169922,3.4440002,6.3099976,9.3639984,6.09198,16.7910004-.4349976,15.4889908-12.9449768,22.8089981-37.5189819,26.8989944-18.8089905,3.1220093-37.8460083,6.1350098-54.2610168,8.503006v-44.5510025ZM333.1929703,239.3303532c-18.1669922.8609924-46.9840088,1.7220001-46.875,1.8300018v-48.9649963s42.6319885-4.1980133,50.2359924-4.8440094c10.4429932-.7529907,17.07901-1.5059967,25.1180115-.5379944,11.6399841,1.2919922,17.5140076,10.548996,17.9490051,19.5800018,1.414978,24.5299988-25.2260132,31.9570007-46.4390259,33.0339966v-.1080017l.0110168.0110016Z"/>
                 </svg>
                 <h1>Formulaire d'Entrée Salarié</h1>
                 <p>Complétez les informations en 5 étapes</p>
@@ -1623,6 +1535,15 @@
 
                             <!-- LIGNE 6: Numéro sécu, Clé -->
                             <div class="form-grid">
+                                <div class="form-group full-width">
+                                    <label style="display:flex;align-items:center;gap:8px;cursor:pointer;font-weight:500;">
+                                        <input type="checkbox" id="sans_secu_fr" name="sans_secu_fr" onchange="toggleSecu(this)" style="width:16px;height:16px;accent-color:#4f46e5;cursor:pointer;">
+                                        Le salarié n'a pas (encore) de numéro de sécurité sociale français
+                                        <button type="button" class="info-btn" onclick="this.classList.toggle('active')" onblur="this.classList.remove('active')"><span class="info-popup">Cochez cette case si le salarié est étranger en attente de numéro, en détachement, ou en cours d'immatriculation.</span>i</button>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="form-grid" id="bloc_secu">
                                 <div class="form-group">
                                     <label>Numéro de sécurité sociale</label>
                                     <input type="text" name="numero_secu" id="numero_secu" placeholder="13 chiffres" maxlength="13" onblur="validerNIR()">
@@ -1632,6 +1553,12 @@
                                     <label>Clé <button type="button" class="info-btn" onclick="this.classList.toggle('active')" onblur="this.classList.remove('active')"><span class="info-popup">La clé est obligatoire si vous avez renseigné le numéro de sécurité sociale. Il s'agit des 2 derniers chiffres figurant sur la carte Vitale, après les 13 chiffres du numéro.</span>i</button></label>
                                     <input type="text" name="cle_secu" id="cle_secu" maxlength="2" onblur="validerNIR()">
                                     <div id="alerte_cle_nir" style="display:none;margin-top:6px;padding:8px 12px;border-radius:8px;font-size:13px;"></div>
+                                </div>
+                            </div>
+                            <div id="bloc_sans_secu" style="display:none;margin-top:8px;">
+                                <div class="form-group">
+                                    <label>Commentaire / situation <span style="color:#6b7280;font-weight:400;">(optionnel)</span></label>
+                                    <input type="text" name="commentaire_secu" id="commentaire_secu" placeholder="Ex : En attente de numéro définitif.">
                                 </div>
                             </div>
                         </div>
@@ -2656,51 +2583,6 @@
                 particleContent = ['🌿','☘️','🌱','💮','🤍','💮','🌿','💮'];
                 particleCount = 30;
                 animationDuration = [10, 18];
-
-            // ─────────────────────────────────────────────
-            // ⚽ COUPE DU MONDE 2026 : 11 juin - 19 juillet
-            // ─────────────────────────────────────────────
-            } else if (!testMonth && new Date() >= new Date(2026, 5, 9) && new Date() < new Date(2026, 6, 20)) {
-                // Fond : ciel bleu estival avec reflets dorés
-                bgAnimation.style.background = 'linear-gradient(160deg, #1a6aba 0%, #2e8fd4 30%, #87CEEB 70%, #b8e4f9 100%)';
-                document.body.style.background = bgAnimation.style.background;
-                // Soleil festif
-                const sun = document.createElement('div'); sun.className = 'wc-sun'; bgAnimation.appendChild(sun);
-                // Bannière trophée
-                const banner = document.createElement('div'); banner.className = 'wc-trophy-banner';
-                banner.textContent = '🏆 FIFA World Cup 2026 🏆'; bgAnimation.appendChild(banner);
-                // Ballons de foot qui tombent
-                for (let i = 0; i < 20; i++) {
-                    const b = document.createElement('div'); b.className = 'seasonal-particle wc-ball';
-                    b.textContent = '⚽'; b.style.left = Math.random() * 100 + '%';
-                    const d = 7 + Math.random() * 8; b.style.animationDuration = d + 's';
-                    b.style.animationDelay = (Math.random() * d) + 's';
-                    b.style.transform = 'scale(' + (0.6 + Math.random() * 0.9) + ')';
-                    bgAnimation.appendChild(b);
-                }
-                // Coupes du monde qui tombent
-                for (let i = 0; i < 12; i++) {
-                    const t = document.createElement('div'); t.className = 'seasonal-particle wc-trophy';
-                    t.textContent = '🏆'; t.style.left = Math.random() * 100 + '%';
-                    const d = 9 + Math.random() * 10; t.style.animationDuration = d + 's';
-                    t.style.animationDelay = (Math.random() * d) + 's';
-                    t.style.transform = 'scale(' + (0.5 + Math.random() * 0.8) + ')';
-                    bgAnimation.appendChild(t);
-                }
-                // Confettis dorés et colorés
-                const wcColors = ['#FFD700','#FFA500','#FF4444','#4488FF','#FFFFFF','#FF8800'];
-                for (let i = 0; i < 35; i++) {
-                    const c = document.createElement('div'); c.className = 'wc-confetti';
-                    c.style.background = wcColors[Math.floor(Math.random() * wcColors.length)];
-                    c.style.left = Math.random() * 100 + '%';
-                    const d = 6 + Math.random() * 9; c.style.animationDuration = d + 's';
-                    c.style.animationDelay = (Math.random() * d) + 's';
-                    c.style.width = (7 + Math.random() * 9) + 'px';
-                    c.style.height = (7 + Math.random() * 9) + 'px';
-                    c.style.borderRadius = Math.random() < 0.5 ? '50%' : '2px';
-                    bgAnimation.appendChild(c);
-                }
-                return;
 
             // ─────────────────────────────────────────────
             // 🏖️ JUIN-AOÛT : Été ensoleillé (inchangé)
@@ -43632,7 +43514,7 @@ console.log('✅ 39192 codes postaux chargés');
     <div class="bg-animation"></div>
     <div class="container">
         <div class="logo">
-            <h1>SHINE</h1>
+            <h1>EBP</h1>
             <p>Formulaire d'Entrée Salarié</p>
         </div>
 
@@ -43808,7 +43690,11 @@ console.log('✅ 39192 codes postaux chargés');
                     </div>
                     <div class="form-group">
                         <label>Numéro de Sécurité Sociale</label>
-                        <div class="input-value ${data.numero_secu ? '' : 'empty'}">${data.numero_secu || 'Non renseigné'}</div>
+                        <div class="input-value ${data.sans_secu_fr === 'on' ? 'empty' : (data.numero_secu ? '' : 'empty')}">
+                            ${data.sans_secu_fr === 'on'
+                                ? '⚠️ Pas de numéro SS français' + (data.commentaire_secu ? ' — ' + data.commentaire_secu : '')
+                                : (data.numero_secu ? data.numero_secu + (data.cle_secu ? ' (clé : ' + data.cle_secu + ')' : '') : 'Non renseigné')}
+                        </div>
                     </div>
                 </div>
             </div>
@@ -44348,7 +44234,7 @@ console.log('✅ 39192 codes postaux chargés');
 
             <div class="document-footer">
                 Document généré le ${new Date().toLocaleDateString('fr-FR')} à ${new Date().toLocaleTimeString('fr-FR')}<br>
-                Formulaire d'Entrée Salarié SHINE
+                Formulaire d'Entrée Salarié EBP
             </div>
         </div>
     </div>
@@ -44455,16 +44341,6 @@ console.log('✅ 39192 codes postaux chargés');
                 bg.style.background = 'linear-gradient(to bottom,#c8f0c8 0%,#e8f8e0 50%,#f5fff0 100%)';
                 document.body.style.background = bg.style.background;
                 particleType='muguet-particle'; particleContent=['🌿','☘️','🌱','💮','🤍','💮','🌿','💮']; particleCount=30; animDuration=[10,18];
-            } else if (!testMonth && new Date() >= new Date(2026, 5, 9) && new Date() < new Date(2026, 6, 20)) {
-                bg.style.background='linear-gradient(160deg,#1a6aba 0%,#2e8fd4 30%,#87CEEB 70%,#b8e4f9 100%)';
-                document.body.style.background=bg.style.background;
-                const sun2=document.createElement('div');sun2.className='wc-sun';bg.appendChild(sun2);
-                const banner2=document.createElement('div');banner2.className='wc-trophy-banner';banner2.textContent='🏆 FIFA World Cup 2026 🏆';bg.appendChild(banner2);
-                for(let i=0;i<20;i++){const b=document.createElement('div');b.className='seasonal-particle wc-ball';b.textContent='⚽';b.style.left=Math.random()*100+'%';const d=7+Math.random()*8;b.style.animationDuration=d+'s';b.style.animationDelay=(Math.random()*d)+'s';b.style.transform='scale('+(0.6+Math.random()*0.9)+')';bg.appendChild(b);}
-                for(let i=0;i<12;i++){const t=document.createElement('div');t.className='seasonal-particle wc-trophy';t.textContent='🏆';t.style.left=Math.random()*100+'%';const d=9+Math.random()*10;t.style.animationDuration=d+'s';t.style.animationDelay=(Math.random()*d)+'s';t.style.transform='scale('+(0.5+Math.random()*0.8)+')';bg.appendChild(t);}
-                const wcColors2=['#FFD700','#FFA500','#FF4444','#4488FF','#FFFFFF','#FF8800'];
-                for(let i=0;i<35;i++){const c=document.createElement('div');c.className='wc-confetti';c.style.background=wcColors2[Math.floor(Math.random()*wcColors2.length)];c.style.left=Math.random()*100+'%';const d=6+Math.random()*9;c.style.animationDuration=d+'s';c.style.animationDelay=(Math.random()*d)+'s';c.style.width=(7+Math.random()*9)+'px';c.style.height=(7+Math.random()*9)+'px';c.style.borderRadius=Math.random()<0.5?'50%':'2px';bg.appendChild(c);}
-                return;
             } else if (month >= 6 && month <= 8) {
                 bg.style.background = 'linear-gradient(to bottom,#87CEEB 0%,#E0F6FF 100%)';
                 const sun=document.createElement('div');sun.className='summer-sun';bg.appendChild(sun); return;
@@ -44526,7 +44402,33 @@ console.log('✅ 39192 codes postaux chargés');
             updateStep();
         }
 
+        function toggleSecu(cb) {
+            const blocSecu = document.getElementById('bloc_secu');
+            const blocSans = document.getElementById('bloc_sans_secu');
+            const secu = document.getElementById('numero_secu');
+            const cle = document.getElementById('cle_secu');
+            const alerte = document.getElementById('alerte_nir');
+            const alerteCle = document.getElementById('alerte_cle_nir');
+            if (cb.checked) {
+                blocSecu.style.display = 'none';
+                blocSans.style.display = 'block';
+                // Vider et désactiver la validation
+                if (secu) { secu.value = ''; secu.style.borderColor = ''; }
+                if (cle)  { cle.value  = ''; cle.style.borderColor  = ''; }
+                if (alerte) alerte.style.display = 'none';
+                if (alerteCle) alerteCle.style.display = 'none';
+                nirErreur = false; cleErreur = false;
+            } else {
+                blocSecu.style.display = '';
+                blocSans.style.display = 'none';
+            }
+        }
+
         function validerNIR() {
+            // Si la case "pas de numéro FR" est cochée → on ne valide pas
+            const sansFr = document.getElementById('sans_secu_fr');
+            if (sansFr && sansFr.checked) { nirErreur = false; cleErreur = false; return; }
+
             const input = document.getElementById('numero_secu');
             const alerte = document.getElementById('alerte_nir');
             const nir = input ? input.value.trim() : '';
