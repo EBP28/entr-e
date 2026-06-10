@@ -509,6 +509,72 @@
             100% { transform: translateY(110vh) translateX(5px) rotate(5deg) scale(1); opacity: 0; }
         }
 
+        /* ⚽ COUPE DU MONDE 2026 (11 juin - 19 juillet) */
+        .wc-ball {
+            font-size: 26px;
+            opacity: 0.9;
+            animation: wc-bounce linear infinite;
+            filter: drop-shadow(0 4px 6px rgba(0,0,0,0.4));
+        }
+        @keyframes wc-bounce {
+            0%   { transform: translateY(-10vh) translateX(0) rotate(0deg); opacity: 0; }
+            8%   { opacity: 0.9; }
+            20%  { transform: translateY(20vh) translateX(40px) rotate(72deg); }
+            35%  { transform: translateY(35vh) translateX(-30px) rotate(126deg); }
+            50%  { transform: translateY(50vh) translateX(50px) rotate(180deg); }
+            65%  { transform: translateY(65vh) translateX(-20px) rotate(252deg); }
+            80%  { transform: translateY(80vh) translateX(35px) rotate(324deg); }
+            92%  { opacity: 0.9; }
+            100% { transform: translateY(112vh) translateX(0) rotate(360deg); opacity: 0; }
+        }
+        .wc-trophy-banner {
+            position: absolute;
+            top: 16px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 20px;
+            font-weight: 800;
+            letter-spacing: 2px;
+            color: rgba(255,215,0,0.92);
+            text-shadow: 0 0 20px rgba(255,215,0,0.7), 0 0 40px rgba(255,165,0,0.5);
+            pointer-events: none;
+            white-space: nowrap;
+            animation: wc-pulse 3s ease-in-out infinite;
+        }
+        @keyframes wc-pulse {
+            0%, 100% { opacity: 0.85; text-shadow: 0 0 20px rgba(255,215,0,0.6), 0 0 40px rgba(255,165,0,0.4); }
+            50%       { opacity: 1;    text-shadow: 0 0 35px rgba(255,215,0,1),   0 0 65px rgba(255,165,0,0.8); }
+        }
+        .wc-flag {
+            position: absolute;
+            font-size: 28px;
+            pointer-events: none;
+            animation: wc-flag-drift linear infinite;
+            opacity: 0.85;
+        }
+        @keyframes wc-flag-drift {
+            0%   { transform: translateY(110vh) scale(0.8); opacity: 0; }
+            8%   { opacity: 0.85; }
+            25%  { transform: translateY(75vh)  translateX(20px)  scale(1); }
+            50%  { transform: translateY(50vh)  translateX(-25px) scale(1.05); }
+            75%  { transform: translateY(25vh)  translateX(15px)  scale(0.95); }
+            92%  { opacity: 0.85; }
+            100% { transform: translateY(-10vh) scale(0.8); opacity: 0; }
+        }
+        .wc-stadium-glow {
+            position: absolute;
+            bottom: 0; left: 0;
+            width: 100%; height: 220px;
+            background: radial-gradient(ellipse 900px 200px at 50% 100%,
+                rgba(0,200,80,0.18) 0%, transparent 70%);
+            pointer-events: none;
+            animation: stadium-flicker 5s ease-in-out infinite;
+        }
+        @keyframes stadium-flicker {
+            0%, 100% { opacity: 0.7; }
+            50%      { opacity: 1; }
+        }
+
         /* 📚 SEPTEMBRE : Rentrée scolaire */
         .rentree-particle {
             font-size: 22px;
@@ -44291,6 +44357,50 @@ console.log('✅ 39192 codes postaux chargés');
             const bg = document.querySelector('.bg-animation');
             if (!bg) return;
             let particleType, particleContent, particleCount, animDuration;
+
+            // ⚽ COUPE DU MONDE 2026 : priorité du 11 juin au 19 juillet 2026
+            const now = new Date();
+            const wcStart = new Date('2026-06-11');
+            const wcEnd   = new Date('2026-07-20'); // exclusif
+            const isWC = now >= wcStart && now < wcEnd;
+            if (isWC) {
+                bg.style.background = 'linear-gradient(160deg,#0a2a0a 0%,#0d3d14 25%,#1a5c1a 55%,#0a2a0a 100%)';
+                document.body.style.background = bg.style.background;
+                // Lueur stade
+                const glow = document.createElement('div'); glow.className = 'wc-stadium-glow'; bg.appendChild(glow);
+                // Bannière trophée
+                const banner = document.createElement('div'); banner.className = 'wc-trophy-banner';
+                banner.textContent = '🏆 FIFA World Cup 2026 🏆'; bg.appendChild(banner);
+                // Ballons qui tombent
+                for(let i=0;i<28;i++){
+                    const b=document.createElement('div'); b.className='seasonal-particle wc-ball';
+                    b.textContent='⚽'; b.style.left=Math.random()*100+'%';
+                    const d=6+Math.random()*10; b.style.animationDuration=d+'s';
+                    b.style.animationDelay=(Math.random()*d)+'s';
+                    b.style.transform='scale('+(0.7+Math.random()*0.7)+')';
+                    bg.appendChild(b);
+                }
+                // Drapeaux participants qui montent
+                const flags=['🇺🇸','🇧🇷','🇦🇷','🇫🇷','🇩🇪','🇪🇸','🇵🇹','🇮🇹','🇬🇧','🇳🇱','🇧🇪','🇯🇵','🇲🇽','🇨🇦','🇲🇦','🇸🇳','🇦🇺','🇰🇷','🇨🇴','🇺🇾'];
+                for(let i=0;i<16;i++){
+                    const f=document.createElement('div'); f.className='wc-flag';
+                    f.textContent=flags[Math.floor(Math.random()*flags.length)];
+                    f.style.left=Math.random()*100+'%';
+                    const d=9+Math.random()*12; f.style.animationDuration=d+'s';
+                    f.style.animationDelay=(Math.random()*d)+'s';
+                    bg.appendChild(f);
+                }
+                // Étincelles dorées occasionnelles (célébration)
+                setInterval(()=>{
+                    if(Math.random()<0.5){
+                        const s=document.createElement('div'); s.className='shooting-star';
+                        s.style.top=Math.random()*40+'%'; s.style.left=Math.random()*60+'%';
+                        bg.appendChild(s); setTimeout(()=>s.remove(),2000);
+                    }
+                }, 4000+Math.random()*4000);
+                return;
+            }
+
             if (month === 12) {
                 bg.style.background = 'linear-gradient(160deg,#1a3a2a 0%,#2a5a3a 30%,#3a2a50 65%,#2a1a40 100%)';
                 document.body.style.background = bg.style.background;
